@@ -1,0 +1,48 @@
+{
+    "id": "did:web:backroomfederation.xyz",
+    "@context": [
+        "https://www.w3.org/ns/did/v1",
+        {
+            "@base": "did:web:backroomfederation.xyz"
+        }
+    ],
+    "service": [
+        {
+            "id": "#linkeddomains",
+            "type": "LinkedDomains",
+            "serviceEndpoint": {
+                "origins": [
+                    "https://backroomfederation.xyz/"
+                ]
+            }
+        },
+        {
+            "id": "#hub",
+            "type": "IdentityHub",
+            "serviceEndpoint": {
+                "instances": [
+                    "https://hub.did.msidentity.com/v1.0/fdf96749-8be3-44a3-ad0d-5a07e1ab49ed"
+                ]
+            }
+        }
+    ],
+    "verificationMethod": [
+        {
+            "id": "#cf9b81fc436f4f15a697df7d26640d22vcSigningKey-ebdb8",
+            "controller": "did:web:backroomfederation.xyz",
+            "type": "EcdsaSecp256k1VerificationKey2019",
+            "publicKeyJwk": {
+                "crv": "secp256k1",
+                "kty": "EC",
+                "x": "0yVX8Hb4FLa4Uc4n7XhpAp3l6BVnZLYAGMFA0g0kJPI",
+                "y": "XPWhCY51D8FXKWFLi2bb9uaYXtSg_iRRnxh3OQg4ro8"
+            }
+        }
+    ],
+    "authentication": [
+        "#cf9b81fc436f4f15a697df7d26640d22vcSigningKey-ebdb8"
+    ],
+    "assertionMethod": [
+        "#cf9b81fc436f4f15a697df7d26640d22vcSigningKey-ebdb8"
+    ]
+}
